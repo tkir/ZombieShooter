@@ -3,8 +3,8 @@ using System.Threading;
 
 public class WeaponController : MonoBehaviour
 {
-    private WeaponParameters wParam;
-    private AudioSource shootAudioSorce;
+    protected WeaponParameters wParam;
+    protected AudioSource shootAudioSorce;
 
     public GameObject Bullet;
 
@@ -33,7 +33,7 @@ public class WeaponController : MonoBehaviour
     /// Выстрл
     /// </summary>
     /// <param name="FPC">кто стреляет</param>
-    public void OneShoot(GameObject FPC)
+    public virtual void OnShoot(GameObject FPC)
     {
         if (isRecharging) return;
 
@@ -61,7 +61,7 @@ public class WeaponController : MonoBehaviour
         //SparkActiv(true);
     }
 
-    public void RechargeWeapon(GameObject holder)
+    public virtual void RechargeWeapon(GameObject holder)
     {
         isRecharging = true;
         afterRechargeTime = wParam.rechargeDelay;
