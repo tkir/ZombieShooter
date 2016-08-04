@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1769d9667ac959d429464f42ddf72496
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - FPC: {instanceID: 0}
+  - hpBackground: {fileID: 2800000, guid: 7d26da527cdc93c41aebb1da983b673d, type: 3}
+  - hpForegroundLeft: {fileID: 2800000, guid: a0db41d1dc91d3f4595e5d3d1ebd35e8, type: 3}
+  - hpForegroundCenter: {fileID: 2800000, guid: 4962584eb78b8e1449be0d4092325858,
+      type: 3}
+  - hpForegroundRight: {fileID: 2800000, guid: ae5a34346a628ff4b82e220a4ead2a1c, type: 3}
+  - guiSkin: {fileID: 11400000, guid: bc9cca488830c1a4ea090afcbbc427df, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
