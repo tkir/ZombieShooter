@@ -36,7 +36,7 @@ public class FPC_WeaponController : MonoBehaviour
             if (this.activeWeapon.GetComponent<WeaponParameters>().holderCount == 0)
             { if (!RechargeWeapon()) ChangeWeapon(); }
 
-            this.activeWeapon.GetComponent<WeaponController>().OneShoot(this.gameObject);
+            this.activeWeapon.GetComponent<WeaponController>().OnShoot(this.gameObject);
         }
     }
 
