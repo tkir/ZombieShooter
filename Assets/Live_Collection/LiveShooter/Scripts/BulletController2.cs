@@ -9,12 +9,14 @@ public class BulletController2 : MonoBehaviour {
     [HideInInspector]
     public int damage;
     private float lifeTime = 0f;
+    [HideInInspector]
+    public Vector3 speed = new Vector3(0, 0, 1f);
     
     void Update()
     {
         if (isLive)
         {
-            transform.Translate(0, 0, 1f);
+            transform.Translate(speed);
             lifeTime += Time.deltaTime;
         }
         if (lifeTime >= 2f) isLive = false;         //через 2 секунды FPC_Equipment уничтожит пулю
@@ -22,6 +24,7 @@ public class BulletController2 : MonoBehaviour {
 
     public void Hit()
     {
+        if (!isLive) return;
         this.GetComponent<BoxCollider>().enabled = false;
         this.GetComponent<MeshRenderer>().enabled = false;
         this.isLive = false;

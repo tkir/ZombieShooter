@@ -8,6 +8,7 @@ public class WeaponParameters : MonoBehaviour
     public string ammunition;
     [HideInInspector]
     public bool isAmmunition = false;
+    [HideInInspector]
     public int holderCount;
     public GameObject holder;
     public int damage;
@@ -39,6 +40,7 @@ public class WeaponParameters : MonoBehaviour
     void Start()
     {
         OnChangeScreenResolution();
+        if (holder != null) holderCount = holder.GetComponent<AmmunitionParameters>().ammunitionCapacity;
     }
 
     void Update()
